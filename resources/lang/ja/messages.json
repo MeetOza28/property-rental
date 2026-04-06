@@ -1,0 +1,145 @@
+{
+    "auth": {
+        "login_success": "ログインに成功しました",
+        "logout_success": "ログアウトしました",
+        "invalid_credentials": "メールまたはパスワードが正しくありません",
+        "unauthorized": "この操作を実行する権限がありません",
+        "registration_success": "登録が完了しました",
+        "email_verified_success": "メールアドレスが認証されました",
+        "token_not_found": "トークンが見つかりません",
+        "user_not_found": "ユーザーが見つかりません",
+        "user_already_verified": "ユーザーはすでに確認済みです",
+        "email_already_exists": "このメールアドレスは既に登録されています",
+        "invalid_or_expired_token": "トークンが無効または期限切れです",
+        "verification_email_sent": "認証メールを送信しました",
+        "forgot_password_sent": "そのメールが存在する場合、リセットリンクが送信されました",
+        "password_reset_success": "パスワードがリセットされました",
+        "resend_verification_success": "認証メールを送信しました",
+        "refresh_success": "トークンを更新しました",
+        "profile_updated": "プロフィールを更新しました",
+        "password_changed_success": "パスワードを変更しました",
+        "profile_deleted_success": "プロフィールを削除しました"
+    },
+    "property": {
+        "list_success": "物件一覧を取得しました",
+        "created_success": "物件が正常に作成されました",
+        "fetched_success": "物件を取得しました",
+        "updated_success": "物件が更新されました",
+        "deleted_success": "物件が削除されました",
+        "agent_assigned": "担当者が割り当てられました",
+        "image_uploaded": "物件画像がアップロードされました",
+        "image_deleted": "物件画像が削除されました",
+        "images_reordered": "物件画像の順序を更新しました",
+        "invalid_image_index": "画像のインデックスが不正です",
+        "invalid_image_order": "画像の順序が不正です",
+        "not_found": "物件が見つかりません",
+        "station_id_required": "stationRadiusKm を使う場合は stationId を1つだけ指定してください",
+        "station_coordinates_missing": "駅の座標が登録されていません"
+    },
+    "favorite": {
+        "added_success": "お気に入りに追加しました",
+        "removed_success": "お気に入りから削除しました"
+    },
+    "savedSearch": {
+        "created_success": "保存された検索を作成しました",
+        "updated_success": "保存された検索を更新しました",
+        "deleted_success": "保存された検索を削除しました",
+        "alert_toggled": "保存された検索のアラート設定を更新しました"
+    },
+    "admin": {
+        "role_updated": "ロールが更新されました",
+        "user_activated": "ユーザーが有効化されました",
+        "user_deactivated": "ユーザーが無効化されました",
+        "user_restored_success": "ユーザーが復元されました",
+        "agent_status_updated": "エージェントステータスが更新されました",
+        "property_restored_success": "物件が復元されました"
+    },
+    "user": {
+        "states_fetched": "ユーザー状態を取得しました"
+    },
+    "review": {
+        "already_reviewed": "この物件は既にレビュー済みです",
+        "deleted_success": "レビューを削除しました"
+    },
+    "alerts": {
+        "new_matches_found": "検索条件に一致する新しい物件があります"
+    },
+    "system": {
+        "internal_error": "サーバー内部エラー",
+        "something_went_wrong": "問題が発生しました",
+        "not_found": "リソースが見つかりません",
+        "route_not_found": "ルートが見つかりません",
+        "status_ok": "正常",
+        "db_connected": "接続済み"
+    },
+    "csv": {
+        "favorites_headers": "物件名,家賃,お気に入り日時",
+        "properties_headers": "ID,名前,スラグ,ステータス,家賃,住所,区,作成者,担当エージェント,閲覧数,作成日時"
+    },
+    "email": {
+        "verify_subject": "アカウントの確認",
+        "reset_password_subject": "パスワードのリセット",
+        "new_properties_subject": "保存した検索の新しい物件",
+        "price_updated_subject": "価格が更新されました"
+    },
+    "recommendation": {
+        "trending": "人気の物件",
+        "similar": "場所・価格・特徴が類似",
+        "recommended": "あなたへのおすすめ",
+        "preferred_location": "希望エリアに基づく"
+    },
+    "subscription": {
+        "required": "この操作には有効なサブスクリプションが必要です",
+        "current": "有効なサブスクリプションが見つかりました",
+        "plans_loaded": "プランを取得しました",
+        "portal_created": "請求ポータルのセッションを作成しました",
+        "checkout_created": "チェックアウトセッションを作成しました",
+        "cancelled": "サブスクリプションの解約を予約しました",
+        "invoices_loaded": "請求書を取得しました",
+        "stripe_missing": "Stripe が設定されていません",
+        "use_upgrade": "アップグレード API を使用してください",
+        "stripe_price_missing": "このプランの Stripe 価格IDが設定されていません",
+        "invalid_signature": "無効な Stripe シグネチャです",
+        "missing_session_metadata": "セッションのメタデータが不足しています",
+        "lifetime_failed": "ライフタイムサブスクリプションの処理に失敗しました",
+        "not_found": "有効な Stripe サブスクリプションが見つかりません",
+        "plan_not_found": "有効なサブスクリプションプランが見つかりません。サポートに連絡してください。",
+        "upgraded": "プランを正常にアップグレードしました",
+        "lifetime_cannot_cancel": "ライフタイムプランは解約できません",
+        "upgrade_required": "さらに物件を追加するにはProプランにアップグレードしてください",
+        "upgrade_to_pro": "さらに物件を追加するにはProプランにアップグレードしてください",
+        "upgrade_to_premium": "さらに物件を追加するにはプレミアムプランにアップグレードしてください",
+        "upgrade_generic": "さらに物件を追加するにはプランをアップグレードしてください"
+    },
+    "comparison": {
+        "created": "比較が正常に作成されました",
+        "updated": "比較が正常に更新されました",
+        "deleted": "比較が正常に削除されました",
+        "not_found": "比較が見つからないか、すでに削除されています"
+    },
+    "errors": {
+        "comparison_range": "2〜4件の物件を選択する必要があります",
+        "invalid_properties": "1つ以上の物件が無効または未公開です"
+    },
+    "common": {
+        "success": "成功",
+        "error": "エラーが発生しました"
+    },
+    "inquiry": {
+        "created": "問い合わせが作成されました",
+        "message_sent": "メッセージが送信されました",
+        "too_many_messages": "メッセージが多すぎます。しばらく待ってください",
+        "invalid_date": "無効な日付形式（DD/MM/YYYY）",
+        "not_assigned": "この問い合わせはエージェントに割り当てられていません",
+        "not_found": "問い合わせが見つかりません",
+        "status_updated": "ステータスが正常に更新されました",
+        "inquiry_assigned": "問い合わせが正常に割り当てられました"
+    },
+    "status": {
+        "pending": "保留中",
+        "in_progress": "進行中",
+        "responded": "対応済み",
+        "closed": "終了",
+        "spam": "スパム"
+    }
+}

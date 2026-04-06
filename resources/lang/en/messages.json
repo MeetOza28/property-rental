@@ -1,0 +1,145 @@
+{
+    "auth": {
+        "login_success": "Login successful",
+        "logout_success": "Logout successful",
+        "invalid_credentials": "Invalid email or password",
+        "unauthorized": "You are not authorized to perform this action",
+        "registration_success": "Registration successful",
+        "email_verified_success": "Email verified successfully",
+        "token_not_found": "Token not found",
+        "user_not_found": "User not found",
+        "user_already_verified": "User already verified",
+        "email_already_exists": "An account with this email already exists",
+        "invalid_or_expired_token": "Invalid or expired token",
+        "verification_email_sent": "Verification email sent successfully",
+        "forgot_password_sent": "If that email exists, a reset link has been sent",
+        "password_reset_success": "Password reset successful",
+        "resend_verification_success": "Verification email sent successfully",
+        "profile_updated": "Profile updated",
+        "password_changed_success": "Password changed successfully",
+        "profile_deleted_success": "Profile deleted successfully",
+        "refresh_success": "Tokens refreshed successfully"
+    },
+    "property": {
+        "list_success": "Properties fetched successfully",
+        "created_success": "Property created successfully",
+        "fetched_success": "Property fetched successfully",
+        "updated_success": "Property updated successfully",
+        "deleted_success": "Property deleted successfully",
+        "agent_assigned": "Agent assigned successfully",
+        "image_uploaded": "Property image uploaded successfully",
+        "image_deleted": "Property image deleted successfully",
+        "images_reordered": "Property images reordered successfully",
+        "invalid_image_index": "Image index is invalid",
+        "invalid_image_order": "Image order is invalid",
+        "not_found": "Property not found",
+        "station_id_required": "Provide exactly one stationId when using stationRadiusKm",
+        "station_coordinates_missing": "Station is missing coordinates"
+    },
+    "favorite": {
+        "added_success": "Property added to favorites",
+        "removed_success": "Property removed from favorites"
+    },
+    "savedSearch": {
+        "created_success": "Saved search created successfully",
+        "updated_success": "Saved search updated successfully",
+        "deleted_success": "Saved search deleted successfully",
+        "alert_toggled": "Saved search alerts updated successfully"
+    },
+    "admin": {
+        "role_updated": "Role updated",
+        "user_activated": "User activated",
+        "user_deactivated": "User deactivated",
+        "user_restored_success": "User restored successfully",
+        "agent_status_updated": "Agent status updated",
+        "property_restored_success": "Property restored successfully"
+    },
+    "user": {
+        "states_fetched": "User states fetched successfully"
+    },
+    "review": {
+        "already_reviewed": "You already reviewed this property",
+        "deleted_success": "Review deleted"
+    },
+    "alerts": {
+        "new_matches_found": "New properties matching your search"
+    },
+    "system": {
+        "internal_error": "Internal server error",
+        "something_went_wrong": "Something went wrong",
+        "not_found": "Resource not found",
+        "route_not_found": "Route not found",
+        "status_ok": "ok",
+        "db_connected": "connected"
+    },
+    "csv": {
+        "favorites_headers": "Property Name,Rent,Favorited At",
+        "properties_headers": "ID,Name,Slug,Status,Rent Amount,Address,Ward,Creator,Assigned Agent,View Count,Created At"
+    },
+    "email": {
+        "verify_subject": "Verify your account",
+        "reset_password_subject": "Reset your password",
+        "new_properties_subject": "New properties for your saved search",
+        "price_updated_subject": "Price updated"
+    },
+    "recommendation": {
+        "trending": "Trending property",
+        "similar": "Similar location, price & features",
+        "recommended": "Recommended for you",
+        "preferred_location": "Based on your preferred location"
+    },
+    "subscription": {
+        "required": "Active subscription required to perform this action",
+        "current": "Active subscription found",
+        "plans_loaded": "Plans fetched successfully",
+        "portal_created": "Billing portal session created",
+        "checkout_created": "Checkout session created",
+        "cancelled": "Subscription cancellation scheduled",
+        "invoices_loaded": "Invoices loaded",
+        "stripe_missing": "Stripe is not configured",
+        "use_upgrade": "Use upgrade API instead",
+        "stripe_price_missing": "Stripe price ID not configured for this plan",
+        "invalid_signature": "Invalid Stripe signature",
+        "missing_session_metadata": "Missing session metadata",
+        "lifetime_failed": "Failed to process lifetime subscription",
+        "not_found": "No active Stripe subscription found",
+        "plan_not_found": "Active subscription plan not found. Please contact support.",
+        "upgraded": "Plan upgraded successfully",
+        "lifetime_cannot_cancel": "Lifetime plan cannot be cancelled",
+        "upgrade_required": "Upgrade to Pro to add more properties",
+        "upgrade_to_pro": "Upgrade to Pro to add more properties",
+        "upgrade_to_premium": "Upgrade to Premium to add more properties",
+        "upgrade_generic": "Upgrade your plan to add more properties"
+    },
+    "comparison": {
+        "created": "Comparison created successfully",
+        "updated": "Comparison updated successfully",
+        "deleted": "Comparison deleted successfully",
+        "not_found": "Comparison not found or already deleted"
+    },
+    "errors": {
+        "comparison_range": "Must compare 2–4 properties",
+        "invalid_properties": "One or more properties are invalid or unpublished"
+    },
+    "common": {
+        "success": "Success",
+        "error": "Something went wrong"
+    },
+    "inquiry": {
+        "created": "Inquiry created successfully",
+        "message_sent": "Message sent successfully",
+        "too_many_messages": "Too many messages. Please wait.",
+        "invalid_date": "Invalid date format. Use DD/MM/YYYY",
+        "not_found": "Inquiry not found",
+        "not_assigned": "Inquiry is not assigned to an agent",
+        "status_updated": "Status updated successfully",
+        "inquiry_assigned": "Inquiry assigned successfully"
+    },
+    "status": {
+        "pending": "Pending",
+        "in_progress": "In Progress",
+        "responded": "Responded",
+        "closed": "Closed",
+        "spam": "Spam"
+    }
+}

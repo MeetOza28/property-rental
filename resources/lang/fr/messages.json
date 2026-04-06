@@ -1,0 +1,145 @@
+{
+    "auth": {
+        "login_success": "Connexion réussie",
+        "logout_success": "Déconnexion réussie",
+        "invalid_credentials": "Email ou mot de passe invalide",
+        "unauthorized": "Vous n'êtes pas autorisé à effectuer cette action",
+        "registration_success": "Inscription réussie",
+        "email_verified_success": "Email vérifié avec succès",
+        "token_not_found": "Jeton introuvable",
+        "user_not_found": "Utilisateur introuvable",
+        "user_already_verified": "Utilisateur déjà vérifié",
+        "email_already_exists": "Un compte avec cet email existe déjà",
+        "invalid_or_expired_token": "Jeton invalide ou expiré",
+        "verification_email_sent": "Email de vérification envoyé avec succès",
+        "forgot_password_sent": "Si cet email existe, un lien de réinitialisation a été envoyé",
+        "password_reset_success": "Mot de passe réinitialisé avec succès",
+        "resend_verification_success": "Email de vérification envoyé avec succès",
+        "refresh_success": "Jetons régénérés avec succès",
+        "profile_updated": "Profil mis à jour",
+        "password_changed_success": "Mot de passe modifié avec succès",
+        "profile_deleted_success": "Profil supprimé avec succès"
+    },
+    "property": {
+        "list_success": "Liste des propriétés récupérée avec succès",
+        "created_success": "Propriété créée avec succès",
+        "fetched_success": "Propriété récupérée avec succès",
+        "updated_success": "Propriété mise à jour avec succès",
+        "deleted_success": "Propriété supprimée avec succès",
+        "agent_assigned": "Agent attribué avec succès",
+        "image_uploaded": "Image de la propriété téléchargée avec succès",
+        "image_deleted": "Image de la propriété supprimée avec succès",
+        "images_reordered": "Images de la propriété réorganisées avec succès",
+        "invalid_image_index": "Index d'image invalide",
+        "invalid_image_order": "Ordre d'image invalide",
+        "not_found": "Propriété introuvable",
+        "station_id_required": "Fournissez un seul stationId lorsque stationRadiusKm est utilisé",
+        "station_coordinates_missing": "La station n’a pas de coordonnées"
+    },
+    "favorite": {
+        "added_success": "Propriété ajoutée aux favoris",
+        "removed_success": "Propriété retirée des favoris"
+    },
+    "savedSearch": {
+        "created_success": "Recherche sauvegardée créée avec succès",
+        "updated_success": "Recherche sauvegardée mise à jour avec succès",
+        "deleted_success": "Recherche sauvegardée supprimée avec succès",
+        "alert_toggled": "Alertes de recherche sauvegardée mises à jour avec succès"
+    },
+    "admin": {
+        "role_updated": "Rôle mis à jour",
+        "user_activated": "Utilisateur activé",
+        "user_deactivated": "Utilisateur désactivé",
+        "user_restored_success": "Utilisateur restauré avec succès",
+        "agent_status_updated": "Statut de l'agent mis à jour",
+        "property_restored_success": "Propriété restaurée avec succès"
+    },
+    "user": {
+        "states_fetched": "États utilisateur récupérés avec succès"
+    },
+    "review": {
+        "already_reviewed": "Vous avez déjà évalué cette propriété",
+        "deleted_success": "Avis supprimé"
+    },
+    "alerts": {
+        "new_matches_found": "Nouvelles propriétés correspondent à votre recherche"
+    },
+    "system": {
+        "internal_error": "Erreur interne du serveur",
+        "something_went_wrong": "Une erreur s'est produite",
+        "not_found": "Ressource introuvable",
+        "route_not_found": "Route introuvable",
+        "status_ok": "ok",
+        "db_connected": "connecté"
+    },
+    "csv": {
+        "favorites_headers": "Nom propriété,Loyer,Ajouté aux favoris le",
+        "properties_headers": "ID,Nom,Slug,Statut,Montant loyer,Adresse,Quartier,Créateur,Agent assigné,Nb vues,Créé le"
+    },
+    "email": {
+        "verify_subject": "Vérifiez votre compte",
+        "reset_password_subject": "Réinitialisez votre mot de passe",
+        "new_properties_subject": "Nouvelles propriétés pour votre recherche sauvegardée",
+        "price_updated_subject": "Prix mis à jour"
+    },
+    "recommendation": {
+        "trending": "Propriété tendance",
+        "similar": "Emplacement, prix et caractéristiques similaires",
+        "recommended": "Recommandé pour vous",
+        "preferred_location": "Basé sur votre emplacement préféré"
+    },
+    "subscription": {
+        "required": "Abonnement actif requis pour effectuer cette action",
+        "current": "Abonnement actif trouvé",
+        "plans_loaded": "Offres d'abonnement récupérées",
+        "portal_created": "Session du portail de facturation créée",
+        "checkout_created": "Session de paiement créée",
+        "cancelled": "Annulation de l'abonnement programmée",
+        "invoices_loaded": "Factures récupérées",
+        "stripe_missing": "Stripe n'est pas configuré",
+        "use_upgrade": "Utilisez plutôt l'API d'upgrade",
+        "stripe_price_missing": "L'identifiant de prix Stripe n'est pas configuré pour cette offre",
+        "invalid_signature": "Signature Stripe invalide",
+        "missing_session_metadata": "Métadonnées de session manquantes",
+        "lifetime_failed": "Échec du traitement de l'abonnement à vie",
+        "not_found": "Aucun abonnement Stripe actif trouvé",
+        "plan_not_found": "Formule d'abonnement active introuvable. Contactez le support.",
+        "upgraded": "Offre mise à niveau avec succès",
+        "lifetime_cannot_cancel": "L'abonnement à vie ne peut pas être résilié",
+        "upgrade_required": "Passez à l'offre Pro pour ajouter plus de propriétés",
+        "upgrade_to_pro": "Passez à l'offre Pro pour ajouter plus de propriétés",
+        "upgrade_to_premium": "Passez à l'offre Premium pour ajouter plus de propriétés",
+        "upgrade_generic": "Passez à une offre supérieure pour ajouter plus de propriétés"
+    },
+    "comparison": {
+        "created": "Comparaison créée avec succès",
+        "updated": "Comparaison mise à jour avec succès",
+        "deleted": "Comparaison supprimée avec succès",
+        "not_found": "Comparaison introuvable ou déjà supprimée"
+    },
+    "errors": {
+        "comparison_range": "Vous devez comparer 2 à 4 propriétés",
+        "invalid_properties": "Une ou plusieurs propriétés sont invalides ou non publiées"
+    },
+    "common": {
+        "success": "Succès",
+        "error": "Une erreur s'est produite"
+    },
+    "inquiry": {
+        "created": "Demande créée avec succès",
+        "message_sent": "Message envoyé",
+        "too_many_messages": "Trop de messages. Veuillez patienter.",
+        "invalid_date": "Format de date invalide (JJ/MM/AAAA)",
+        "not_assigned": "La demande n'est pas attribuée à un agent",
+        "not_found": "Demande introuvable",
+        "status_updated": "Statut mis à jour avec succès",
+        "inquiry_assigned": "Demande attribuée avec succès"
+    },
+    "status": {
+        "pending": "En attente",
+        "in_progress": "En cours",
+        "responded": "Répondu",
+        "closed": "Fermé",
+        "spam": "Spam"
+    }
+}

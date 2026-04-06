@@ -1,0 +1,145 @@
+{
+    "auth": {
+        "login_success": "सफलतापूर्वक लॉगिन हुआ",
+        "logout_success": "सफलतापूर्वक लॉगआउट हुआ",
+        "invalid_credentials": "गलत ईमेल या पासवर्ड",
+        "unauthorized": "आपको यह कार्रवाई करने का अधिकार नहीं है",
+        "registration_success": "रजिस्ट्रेशन सफल",
+        "email_verified_success": "ईमेल सफलतापूर्वक सत्यापित",
+        "token_not_found": "टोकन नहीं मिला",
+        "user_not_found": "उपयोगकर्ता नहीं मिला",
+        "user_already_verified": "उपयोगकर्ता पहले ही सत्यापित है",
+        "email_already_exists": "इस ईमेल से पहले से एक अकाउंट मौजूद है",
+        "invalid_or_expired_token": "टोकन अमान्य या समाप्त हो चुका है",
+        "verification_email_sent": "सत्यापन ईमेल सफलतापूर्वक भेजा गया",
+        "forgot_password_sent": "अगर वह ईमेल मौजूद है तो रीसेट लिंक भेज दिया गया है",
+        "password_reset_success": "पासवर्ड सफलतापूर्वक रीसेट",
+        "resend_verification_success": "सत्यापन ईमेल सफलतापूर्वक भेजा गया",
+        "refresh_success": "टोकन सफलतापूर्वक रिफ्रेश किए गए",
+        "profile_updated": "प्रोफाइल अपडेट हुई",
+        "password_changed_success": "पासवर्ड सफलतापूर्वक बदला गया",
+        "profile_deleted_success": "प्रोफाइल सफलतापूर्वक हटाई गई"
+    },
+    "property": {
+        "list_success": "प्रॉपर्टीज़ सफलतापूर्वक प्राप्त की गईं",
+        "created_success": "प्रॉपर्टी सफलतापूर्वक बनाई गई",
+        "fetched_success": "प्रॉपर्टी सफलतापूर्वक प्राप्त की गई",
+        "updated_success": "प्रॉपर्टी सफलतापूर्वक अपडेट हुई",
+        "deleted_success": "प्रॉपर्टी सफलतापूर्वक हटाई गई",
+        "agent_assigned": "एजेंट सफलतापूर्वक असाइन किया गया",
+        "image_uploaded": "प्रॉपर्टी की इमेज सफलतापूर्वक अपलोड हुई",
+        "image_deleted": "प्रॉपर्टी की इमेज सफलतापूर्वक हटाई गई",
+        "images_reordered": "प्रॉपर्टी की इमेज का क्रम सफलतापूर्वक बदला गया",
+        "invalid_image_index": "इमेज इंडेक्स अमान्य है",
+        "invalid_image_order": "इमेज क्रम अमान्य है",
+        "not_found": "प्रॉपर्टी नहीं मिली",
+        "station_id_required": "stationRadiusKm के साथ ठीक एक stationId दें",
+        "station_coordinates_missing": "स्टेशन के निर्देशांक अनुपलब्ध हैं"
+    },
+    "favorite": {
+        "added_success": "प्रॉपर्टी पसंदीदा में जोड़ी गई",
+        "removed_success": "प्रॉपर्टी पसंदीदा से हटाई गई"
+    },
+    "savedSearch": {
+        "created_success": "सेव्ड सर्च सफलतापूर्वक बनाई गई",
+        "updated_success": "सेव्ड सर्च सफलतापूर्वक अपडेट हुई",
+        "deleted_success": "सेव्ड सर्च सफलतापूर्वक हटाई गई",
+        "alert_toggled": "सेव्ड सर्च अलर्ट्स सफलतापूर्वक अपडेट हुए"
+    },
+    "admin": {
+        "role_updated": "रोल सफलतापूर्वक अपडेट हुआ",
+        "user_activated": "उपयोगकर्ता सक्रिय हो गया",
+        "user_deactivated": "उपयोगकर्ता निष्क्रिय हो गया",
+        "user_restored_success": "उपयोगकर्ता सफलतापूर्वक पुनर्स्थापित",
+        "agent_status_updated": "एजेंट स्टेटस अपडेट हो गया",
+        "property_restored_success": "प्रॉपर्टी सफलतापूर्वक पुनर्स्थापित"
+    },
+    "user": {
+        "states_fetched": "उपयोगकर्ता स्टेट्स सफलतापूर्वक प्राप्त"
+    },
+    "review": {
+        "already_reviewed": "आपने पहले ही इस प्रॉपर्टी की समीक्षा की है",
+        "deleted_success": "समीक्षा हटाई गई"
+    },
+    "alerts": {
+        "new_matches_found": "आपकी सर्च से मेल खाने वाली नई प्रॉपर्टीज़"
+    },
+    "system": {
+        "internal_error": "इंटरनल सर्वर एरर",
+        "something_went_wrong": "कुछ गलत हो गया",
+        "not_found": "संसाधन नहीं मिला",
+        "route_not_found": "रूट नहीं मिला",
+        "status_ok": "ठीक",
+        "db_connected": "जुड़ा हुआ"
+    },
+    "csv": {
+        "favorites_headers": "प्रॉपर्टी नाम,किराया,पसंदीदा तारीख",
+        "properties_headers": "आईडी,नाम,स्लग,स्टेटस,किराया,पता,वार्ड,निर्माता,एजेंट,व्यू काउंट,बनाया गया"
+    },
+    "email": {
+        "verify_subject": "अपना अकाउंट सत्यापित करें",
+        "reset_password_subject": "अपना पासवर्ड रीसेट करें",
+        "new_properties_subject": "आपकी सेव्ड सर्च की नई प्रॉपर्टीज़",
+        "price_updated_subject": "कीमत अपडेट हो गई"
+    },
+    "recommendation": {
+        "trending": "लोकप्रिय प्रॉपर्टी",
+        "similar": "स्थान, कीमत और विशेषताओं में समान",
+        "recommended": "आपके लिए सुझाया गया",
+        "preferred_location": "आपके पसंदीदा क्षेत्र के आधार पर"
+    },
+    "subscription": {
+        "required": "इस कार्रवाई के लिए सक्रिय सब्सक्रिप्शन आवश्यक है",
+        "current": "सक्रिय सब्सक्रिप्शन मिला",
+        "plans_loaded": "सब्सक्रिप्शन प्लान प्राप्त किए गए",
+        "portal_created": "बिलिंग पोर्टल सत्र बनाया गया",
+        "checkout_created": "चेकआउट सत्र बनाया गया",
+        "cancelled": "सब्सक्रिप्शन रद्द करने का समय निर्धारित",
+        "invoices_loaded": "इनवॉइस प्राप्त किए गए",
+        "stripe_missing": "Stripe कॉन्फ़िगर नहीं है",
+        "use_upgrade": "कृपया अपग्रेड API का उपयोग करें",
+        "stripe_price_missing": "इस प्लान के लिए Stripe price ID कॉन्फ़िगर नहीं है",
+        "invalid_signature": "अमान्य Stripe सिग्नेचर",
+        "missing_session_metadata": "सत्र मेटाडेटा अनुपलब्ध है",
+        "lifetime_failed": "लाइफटाइम सब्सक्रिप्शन संसाधित करने में विफल",
+        "not_found": "सक्रिय Stripe सब्सक्रिप्शन नहीं मिला",
+        "plan_not_found": "सक्रिय सब्सक्रिप्शन प्लान नहीं मिला। कृपया सहायता से संपर्क करें।",
+        "upgraded": "प्लान सफलतापूर्वक अपग्रेड हुआ",
+        "lifetime_cannot_cancel": "लाइफटाइम प्लान रद्द नहीं किया जा सकता",
+        "upgrade_required": "अधिक प्रॉपर्टी जोड़ने के लिए प्रो प्लान पर अपग्रेड करें",
+        "upgrade_to_pro": "अधिक प्रॉपर्टी जोड़ने के लिए प्रो प्लान पर अपग्रेड करें",
+        "upgrade_to_premium": "और प्रॉपर्टी जोड़ने के लिए प्रीमियम प्लान पर अपग्रेड करें",
+        "upgrade_generic": "अधिक प्रॉपर्टी जोड़ने के लिए अपना प्लान अपग्रेड करें"
+    },
+    "comparison": {
+        "created": "तुलना सफलतापूर्वक बनाई गई",
+        "updated": "तुलना सफलतापूर्वक अपडेट की गई",
+        "deleted": "तुलना सफलतापूर्वक हटाई गई",
+        "not_found": "तुलना नहीं मिली या पहले ही हटाई जा चुकी है"
+    },
+    "errors": {
+        "comparison_range": "2–4 प्रॉपर्टी का चयन करना आवश्यक है",
+        "invalid_properties": "एक या अधिक प्रॉपर्टी अमान्य या प्रकाशित नहीं हैं"
+    },
+    "common": {
+        "success": "सफल",
+        "error": "कुछ गलत हुआ"
+    },
+    "inquiry": {
+        "created": "पूछताछ सफलतापूर्वक बनाई गई",
+        "message_sent": "संदेश भेजा गया",
+        "too_many_messages": "बहुत अधिक संदेश, कृपया प्रतीक्षा करें",
+        "invalid_date": "अमान्य तारीख प्रारूप (DD/MM/YYYY)",
+        "not_found": "पूछताछ नहीं मिली",
+        "not_assigned": "यह पूछताछ किसी एजेंट को असाइन नहीं है",
+        "status_updated": "स्थिति सफलतापूर्वक अपडेट की गई",
+        "inquiry_assigned": "पूछताछ सफलतापूर्वक असाइन की गई"
+    },
+    "status": {
+        "pending": "लंबित",
+        "in_progress": "प्रक्रिया में",
+        "responded": "उत्तर दिया गया",
+        "closed": "बंद",
+        "spam": "स्पैम"
+    }
+}

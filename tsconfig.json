@@ -1,0 +1,14 @@
+{
+    "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+    "compilerOptions": {
+        "rootDir": "./",
+        "outDir": "./build",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+      "adonis-geo-search-1": [
+        "./node_modules/adonis-geo-search-1/build/index.d.ts"
+      ]
+    }
+    }
+}
