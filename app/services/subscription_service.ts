@@ -112,12 +112,7 @@ export class SubscriptionService {
                 return 'incomplete'
         }
     }
-    /**? most popular propertiy
-     * aa month ma created property and assigned
-     * daily property ketli view thay (weekly, monthly)
-     * compare 2 week / 2 month
-     *
-     */
+
     static async findActiveSubscription(userId: string) {
         const nowSql = DateTime.now().toSQL()
 

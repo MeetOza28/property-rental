@@ -124,7 +124,7 @@ export default class InquiriesController {
         }
     }
 
-    async show({ params, request, i18n, auth, response }: HttpContext) {
+    async show({ params, request, i18n }: HttpContext) {
         const { id } = await request.validateUsing(
             vine.compile(vine.object({ id: vine.string().uuid() })),
             { data: params }
@@ -199,12 +199,6 @@ export default class InquiriesController {
             attachments: payload.attachments ?? null,
             isRead: false,
         })
-
-        //radius(through train station or plain )
-        //like
-        //rating vise filetr
-        //sortBy
-        //perticular ward
 
         // if (!inquiry.assignedTo) {
         //     return {

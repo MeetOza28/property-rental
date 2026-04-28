@@ -18,7 +18,7 @@ import string from '@adonisjs/core/helpers/string'
 import PropertyFavorite from './property_favorite.js'
 import PropertyView from './property_view.js'
 import PropertyReview from './property_review.js'
-import { GeoSearchMixin } from 'adonis-geo-search-1'
+import { GeoSearchMixin } from '@meetoza28/adonis-geo-search'
 // import { slugify } from '@adonisjs/lucid-slugify'
 
 export default class Property extends GeoSearchMixin(BaseModel) {

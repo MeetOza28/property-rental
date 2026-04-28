@@ -5,7 +5,7 @@ import Property from './property.js'
 import TrainLine from './train_line.js'
 
 // import { GeoSearchMixin } from './src/geo_mixin.js'
-import { GeoSearchMixin } from 'adonis-geo-search-1'
+import { GeoSearchMixin } from '@meetoza28/adonis-geo-search'
 
 export default class TrainStation extends GeoSearchMixin(BaseModel) {
     @column({ isPrimary: true })

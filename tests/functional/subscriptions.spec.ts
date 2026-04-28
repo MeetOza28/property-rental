@@ -61,6 +61,7 @@ test.group('Subscriptions', (group) => {
         } as any)
 
         sinon.stub(Stripe.prototype, 'subscriptions').value({
+            list: sinon.fake.resolves({ data: [] }),
             retrieve: sinon.fake.resolves({ status: 'canceled' }),
         } as any)
 
@@ -72,6 +73,67 @@ test.group('Subscriptions', (group) => {
 
         res.assertStatus(201)
         res.assertBodyContains({ success: true, session: dummySession })
+    })
+
+    test('blocks a duplicate checkout when stripe already has an active subscription', async ({
+        client,
+    }) => {
+        const agent = await createUser({ role: 'agent', isActive: true } as any)
+        const plan = await SubscriptionPlan.firstOrCreate(
+            { stripePriceId: 'price_test_duplicate' },
+            {
+                name: 'Test Plan',
+                description: 'Test',
+                stripePriceId: 'price_test_duplicate',
+                stripeProductId: 'prod_test',
+                amount: 1000,
+                currency: 'usd',
+                interval: 'month',
+                isActive: true,
+            } as any
+        )
+
+        sinon.stub(Stripe.prototype, 'checkout').value({
+            sessions: {
+                create: sinon.fake.resolves(dummySession),
+            },
+        } as any)
+
+        sinon.stub(Stripe.prototype, 'customers').value({
+            create: sinon.fake.resolves({ id: 'cus_123' }),
+        } as any)
+
+        sinon.stub(Stripe.prototype, 'subscriptions').value({
+            list: sinon.fake.resolves({
+                data: [
+                    {
+                        id: 'sub_active_1',
+                        status: 'active',
+                        cancel_at_period_end: false,
+                        cancel_at: null,
+                        canceled_at: null,
+                        current_period_end: Math.floor(Date.now() / 1000) + 3600,
+                        items: {
+                            data: [
+                                {
+                                    price: { id: plan.stripePriceId },
+                                },
+                            ],
+                        },
+                    },
+                ],
+            }),
+            retrieve: sinon.fake.resolves({ status: 'active' }),
+        } as any)
+
+        const res = await client
+            .post('/subscriptions/checkout')
+            .json({ planId: plan.id })
+            .withGuard('api')
+            .loginAs(agent)
+
+        res.assertStatus(400)
+        res.assertBodyContains({ error: 'You are already on this plan' })
     })
 
     test('creates billing portal session', async ({ client }) => {

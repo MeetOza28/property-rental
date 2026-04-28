@@ -727,14 +727,6 @@ export default class PropertiesController {
                 .whereNull('deleted_at')
                 .firstOrFail()
 
-            // // 👉 ADD HERE
-            // console.log({
-            //     userId: user.id,
-            //     role: user.role,
-            //     createdBy: property.createdBy,
-            //     assignedAgentId: property.assignedAgentId,
-            // })
-
             if (
                 user.role !== 'admin' &&
                 property.createdBy !== user.id &&

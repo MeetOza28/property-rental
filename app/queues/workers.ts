@@ -58,55 +58,63 @@ new Worker(
     async (job) => {
         logger.info({ job: job.name, data: job.data }, 'EmailQueue job received')
 
-        if (job.name === 'sendSavedSearchEmail') {
-            const { default: SendSavedSearchAlertEmail } =
-                await import('../jobs/send_saved_search_alert_email.js')
-            await new SendSavedSearchAlertEmail(job.data).handle()
+        try {
+            if (job.name === 'sendSavedSearchEmail') {
+                const { default: SendSavedSearchAlertEmail } =
+                    await import('../jobs/send_saved_search_alert_email.js')
+                await new SendSavedSearchAlertEmail(job.data).handle()
+            }
+
+            if (job.name === 'sendVerificationEmail') {
+                const { default: SendVerificationEmailJob } =
+                    await import('../jobs/send_verification_email_job.js')
+
+                await new SendVerificationEmailJob(job.data).handle()
+            }
+
+            if (job.name === 'sendPasswordResetEmail') {
+                const { default: SendPasswordResetEmailJob } =
+                    await import('../jobs/send_password_reset_email_job.js')
+
+                await new SendPasswordResetEmailJob(job.data).handle()
+            }
+
+            if (job.name === 'sendNewInquiryEmail') {
+                const { default: SendNewInquiryEmail } =
+                    await import('../jobs/send_new_inquiry_email.js')
+
+                await new SendNewInquiryEmail(job.data).handle()
+            }
+
+            if (job.name === 'sendInquiryResponseEmail') {
+                const { default: SendInquiryResponseEmail } =
+                    await import('../jobs/send_inquiry_response_email.js')
+
+                await new SendInquiryResponseEmail(job.data).handle()
+            }
+
+            if (job.name === 'sendInquiryNewMessageEmail') {
+                const { default: SendInquiryNewMessageEmail } =
+                    await import('../jobs/send_inquiry_new_message_email.js')
+
+                await new SendInquiryNewMessageEmail(job.data).handle()
+            }
+
+            if (job.name === 'sendInquiryConfirmationEmail') {
+                const { default: SendInquiryConfirmationEmail } =
+                    await import('../jobs/send_inquiry_confirmation_email.js')
+
+                await new SendInquiryConfirmationEmail(job.data).handle()
+            }
+
+            logger.info({ job: job.name }, 'EmailQueue job completed')
+        } catch (error) {
+            logger.error(
+                { err: error, job: job.name, attemptsMade: job.attemptsMade, data: job.data },
+                'EmailQueue job failed'
+            )
+            throw error
         }
-
-        if (job.name === 'sendVerificationEmail') {
-            const { default: SendVerificationEmailJob } =
-                await import('../jobs/send_verification_email_job.js')
-
-            await new SendVerificationEmailJob(job.data).handle()
-        }
-
-        if (job.name === 'sendPasswordResetEmail') {
-            const { default: SendPasswordResetEmailJob } =
-                await import('../jobs/send_password_reset_email_job.js')
-
-            await new SendPasswordResetEmailJob(job.data).handle()
-        }
-
-        if (job.name === 'sendNewInquiryEmail') {
-            const { default: SendNewInquiryEmail } =
-                await import('../jobs/send_new_inquiry_email.js')
-
-            await new SendNewInquiryEmail(job.data).handle()
-        }
-
-        if (job.name === 'sendInquiryResponseEmail') {
-            const { default: SendInquiryResponseEmail } =
-                await import('../jobs/send_inquiry_response_email.js')
-
-            await new SendInquiryResponseEmail(job.data).handle()
-        }
-
-        if (job.name === 'sendInquiryNewMessageEmail') {
-            const { default: SendInquiryNewMessageEmail } =
-                await import('../jobs/send_inquiry_new_message_email.js')
-
-            await new SendInquiryNewMessageEmail(job.data).handle()
-        }
-
-        if (job.name === 'sendInquiryConfirmationEmail') {
-            const { default: SendInquiryConfirmationEmail } =
-                await import('../jobs/send_inquiry_confirmation_email.js')
-
-            await new SendInquiryConfirmationEmail(job.data).handle()
-        }
-
-        logger.info({ job: job.name }, 'EmailQueue job completed')
     },
     { connection }
 )

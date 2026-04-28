@@ -9,7 +9,7 @@ export default class SendVerificationEmailJob {
         await mail.send((message) => {
             message.to(email).subject('Verify your account').html(`
         <h2>Welcome ${username}</h2>
-        <a href="http://localhost:3335/auth/verify-email/${token}">
+        <a href="http://localhost:3336/auth/verify-email/${token}">
           Verify Email
         </a>
       `)

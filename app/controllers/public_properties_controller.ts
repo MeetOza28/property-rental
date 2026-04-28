@@ -7,7 +7,7 @@ import PropertyFavorite from '#models/property_favorite'
 import type { HttpContext } from '@adonisjs/core/http'
 import vine from '@vinejs/vine'
 import { FormatService } from '#services/format_service'
-import { PropertySearch, PropertySearchValidationError } from 'adonis-geo-search-1'
+import { PropertySearch, PropertySearchValidationError } from '@meetoza28/adonis-geo-search'
 
 function normalizeToArray(value: any): string[] | undefined {
     if (!value) return undefined
