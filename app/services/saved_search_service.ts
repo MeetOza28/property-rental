@@ -61,6 +61,7 @@ export class SavedSearchService {
 
         return Number(result[0].$extras.total)
     }
+
     static async getDueSearches(frequency: 'instant' | 'daily' | 'weekly') {
         return SavedSearch.query()
             .where('email_alerts_enabled', true)

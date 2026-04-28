@@ -2,7 +2,7 @@
 import Property from '#models/property'
 import TrainStation from '#models/train_station'
 import app from '@adonisjs/core/services/app'
-import { PropertySearch } from 'adonis-geo-search-1'
+import { PropertySearch } from '@meetoza28/adonis-geo-search'
 
 app.booted(() => {
     console.log('Property booted:', (Property as any).booted)

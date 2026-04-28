@@ -52,7 +52,7 @@ export default defineConfig({
         () => import('@adonisjs/cors/cors_provider'),
         () => import('@adonisjs/lucid/database_provider'),
         () => import('@adonisjs/auth/auth_provider'),
-        // () => import('@adonisjs/mail/mail_provider'),
+        () => import('@adonisjs/mail/mail_provider'),
         // Optional bull-queue providers removed to avoid runtime import errors
         // () => import('@acidiney/bull-queue/queue_provider'),
         () => import('@adonisjs/limiter/limiter_provider'),

@@ -9,17 +9,6 @@ import Stripe from 'stripe'
 import { DateTime } from 'luxon'
 import db from '@adonisjs/lucid/services/db'
 
-/**
- * Compatibility layer for tests that stub `Stripe.prototype.checkout`,
- * `Stripe.prototype.billingPortal`, and `Stripe.prototype.subscriptions`.
- *
- * In newer `stripe` versions those properties can be defined on the instance
- * instead of the prototype, which makes `sinon.stub(Stripe.prototype, 'x')`
- * throw ("Cannot stub non-existent property ...").
- *
- * We add placeholder properties on the prototype so sinon can stub them,
- * while still falling back to the instance values at runtime.
- */
 const ensureStripePrototypeStubProps = () => {
     const proto = Stripe.prototype as any
     for (const key of ['checkout', 'billingPortal', 'subscriptions', 'customers']) {
@@ -166,6 +155,49 @@ export default class SubscriptionsController {
         }
 
         const isLifetime = plan.interval === 'lifetime'
+
+        if (!isLifetime) {
+            const stripeSubscriptions = await stripe.subscriptions.list({
+                customer: customerId,
+                status: 'all',
+                limit: 100,
+            })
+
+            const nowUnix = DateTime.now().toUnixInteger()
+            const blockingSubscription = stripeSubscriptions.data.find((subscription) => {
+                const isActiveLike = ['active', 'trialing', 'past_due', 'unpaid'].includes(
+                    subscription.status
+                )
+
+                if (!isActiveLike) {
+                    return false
+                }
+
+                if (
+                    subscription.cancel_at_period_end ||
+                    subscription.cancel_at ||
+                    subscription.canceled_at
+                ) {
+                    return false
+                }
+
+                return !subscription.current_period_end || subscription.current_period_end > nowUnix
+            })
+
+            if (blockingSubscription) {
+                const currentPriceId = blockingSubscription.items.data[0]?.price?.id
+
+                if (currentPriceId === plan.stripePriceId) {
+                    return response.badRequest({
+                        error: 'You are already on this plan',
+                    })
+                }
+
+                return response.badRequest({
+                    error: i18n.t('messages.subscription.use_upgrade'),
+                })
+            }
+        }
 
         const checkoutApi = ((Stripe.prototype as any).checkout ?? stripe.checkout) as any
 
